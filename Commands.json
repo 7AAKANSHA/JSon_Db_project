@@ -1,0 +1,214 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "ace273f7-3f1f-44ff-b25e-7d01d39d37df",
+        "name": "Json_Db_Commands"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90938857|-31948834038275014|90947383\",\n    \"cmd\": \"PUT_ALL\",\n    \"dbName\": \"Student_Course\",\n    \"rel\": \"stu_rel\",\n    \n    \"jsonStr\": [\n        {\n            \"name\": \"Pranitha\",\n            \"email\": \"pranitha@gmail.com\",\n          \"course\":\"Devops\",\n          \"username\":\"Pranit2\",\n            \"password\": \"Pr3293\"\n          },\n        {\n            \"name\": \"Sarah Khan\",\n            \"email\": \"sarahkhan@gmail.com\",\n            \"course\":\"Devops\",\n          \"username\":\"Sara2\",\n            \"password\": \"Sa3293\"\n\n        },\n        {\n            \"name\": \"Akhil\",\n            \"email\": \"akhil81@gmail.com\",\n             \"course\":\"Devops\",\n          \"username\":\"Akhil78\",\n            \"password\": \"Ah293\"\n\n        },\n      {\n            \"name\": \"AndyZ\",\n            \"email\": \"Andy801@gmail.com\",\n             \"course\":\"Blockchain\",\n          \"username\":\"And78\",\n            \"password\": \"Andy293\"\n\n        },\n      {\n            \"name\": \"Jake\",\n            \"email\": \"Jake81@gmail.com\",\n             \"course\":\"Etherium\",\n          \"username\":\"Jake78\",\n            \"password\": \"jhak293\"\n\n        }\n      ]\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "33851519-22ed-4548-a4d1-902b820e005a",
+            "name": "Put_All_Req",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90938857|-31948834038275014|90947383\",\n    \"cmd\": \"PUT\",\n    \"dbName\": \"Employee\",\n    \"rel\": \"index\",\n    \n    \"jsonStr\": {\n        \"name\": \"Jake\",\n        \"email\": \"Jake45@gmail.com\",\n      \"course\": \"DevOps\",\n      \"Gender\":\"Female\",\n        \"password\": \"Jake234\",\n        \n\n    }\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "eb1f5cd3-765f-49d2-a0dd-cfd724aae8d9",
+            "name": "Put_Request",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "\n{\n    \"token\": \"90938857|-31948834038275014|90947383\",\n    \"cmd\": \"SET\",\n    \"dbName\": \"Student_Course\",\n    \"rel\": \"stu_rel\",\n    \"type\": \"PUT\",\n    \"primaryKey\": \"email\",\n    \"uniqueKeys\": [\"username\"]\n    \n    \n\n}\n"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml/set"
+            },
+            "id": "a61db9a3-6ad3-4036-9782-19dcac1cc111",
+            "name": "Set_Req",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90938857|-31948834038275014|90947383\",\n    \"cmd\": \"UPDATE\",\n    \"dbName\": \"Student_Course\",\n    \"rel\": \"stu_rel\",\n    \n    \"jsonStr\": \n        {   \n          \"3\":{\n        \"name\": \"Gargee Mishra\",\n        \"email\":\"gargee@gmail.com\",\n        \"course\": \"Backend_Programme\"\n\n      },\n         \"5\":{\n        \"name\": \"Drake\",\n        \"email\":\"dr_89@gmail.com\",\n        \"course\": \"Frontend_Programme\"\n          }\n          \n        }\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "13df3ff1-7da5-4554-98a8-900aca97f17b",
+            "name": "Update_Rq",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90938857|-31948834038275014|90947383\",\n    \"cmd\": \"PUT\",\n    \"dbName\": \"Student\",\n    \"rel\": \"stu-rel\",\n   \"jsonStr\": {\n       \"sid\"=\"1\",\n        \"name\": \"Sulbha Mishra\",\n        \"email\": \"sulbhamishra@gmail.com\",\n      \"username\":\"subha76\",\n      \"course\":\"blockchain\",\n       \"password\": \"323\"\n     }\n}\n"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "5c27bb36-b350-4c88-8e27-77a1edf64430",
+            "name": "remove_Req",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
