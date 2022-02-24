@@ -23,7 +23,7 @@ Netbeans Web Project with JSon Connectivity
 
 
 
-**1. JPDB index manipulation language iml  **
+**JPDB index manipulation language iml  **
 2. HTTP METHOD :POST
 3. URL:http://api.login2explore.com:5577
 4. END URL: /api/iml
@@ -32,7 +32,7 @@ Netbeans Web Project with JSon Connectivity
 7. SET = insert a new record or upadte an existing record based on primary key .
 8. REMOVE = remove records from the database. 
 
-**** 1. JPDB INDEX RETRIEVAL LANGAUAGE IRL -- TO RETRIEVE JSON  DATA ****
+****  JPDB INDEX RETRIEVAL LANGAUAGE IRL -- TO RETRIEVE JSON  DATA ****
   2. HTTP METHOD : POST 
   3. URL:http://api.login2explore.com:5577 END URL: /api/irl
   4. GET_BY_KEY = retrieve single record by json data 
