@@ -19,12 +19,9 @@ Netbeans Web Project with JSon Connectivity
  4.  Placed Screenshots of Databse creation and tables .
  5.  Commands.Json file also includes all the commnads of IML which I have performed in via Talend Apifor JSon Database Creation.
 
-
-
-
-
-**JPDB index manipulation language iml  **
-2. HTTP METHOD :POST
+**JPDB index manipulation language iml:**
+1. HTTP METHOD :POST
+2. IMl Commands.
 3. URL:http://api.login2explore.com:5577
 4. END URL: /api/iml
 5. PUT COMMAND = To insert , update and delete Json data
@@ -32,14 +29,14 @@ Netbeans Web Project with JSon Connectivity
 7. SET = insert a new record or upadte an existing record based on primary key .
 8. REMOVE = remove records from the database. 
 
-****  JPDB INDEX RETRIEVAL LANGAUAGE IRL -- TO RETRIEVE JSON  DATA ****
-  2. HTTP METHOD : POST 
-  3. URL:http://api.login2explore.com:5577 END URL: /api/irl
-  4. GET_BY_KEY = retrieve single record by json data 
-  5. GET_ALL = Retrieve multiple records from relation
-  6. FIND_RECORD = Retrieve records by json data .
+****  JPDB INDEX RETRIEVAL LANGAUAGE IRL TO RETRIEVE JSON DATA:****
+  1. HTTP METHOD : POST 
+  2. URL:http://api.login2explore.com:5577 END URL: /api/irl
+  3. GET_BY_KEY = retrieve single record by json data 
+  4. GET_ALL = Retrieve multiple records from relation
+  5. FIND_RECORD = Retrieve records by json data .
 
-**7. There are many more Commands to perform , I have taken help from thsi documentation to perform these commands --https://login2explore.com/jpdb/docs.html#jpdb-command-request
+**** There are many more Commands to perform , I have taken help from thsi documentation to perform these commands --https://login2explore.com/jpdb/docs.html#jpdb-command-request:
 **
 
 
