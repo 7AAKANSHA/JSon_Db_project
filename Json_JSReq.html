@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        </head>
+<body>
+    <div class="container">
+        <h2>Student  form</h2>
+        <form id="StudentForm" method="post">
+                <div class="form-group">
+                    <span><label for="sid">Student Id:</label> <label id="sIdmssg">
+                        </label></span>
+                    <input type="text" class="form-control" name="sId" id="sid"
+                           placeholder="Enter Student ID" required>
+                </div>
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" class="form-control" id="name"
+                       placeholder="Enter Student Name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="Enter  Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <input type="text" class="form-control" id="course"
+                       placeholder="Enter Student Course" name="course">
+            </div>
+            <div class="form-group">
+                <label for="Gender">Gender:</label>
+                <input type="text" class="form-control" id="Gender"
+                       placeholder="Enter Username" name="Gender">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="text" class="form-control" id="password"
+                       placeholder="Enter Password" name="password">
+            </div>
+
+            <input type="button" class="btn btn-primary" id="s_stu" value="Save"
+                   onclick="saveStu();">
+        </form>
+    </div>
+    <script>
+        $("#sid").focus();
+        function validateAndGetFormData() {
+             var stuIdVar = $("#sid").val();
+                if (stuIdVar === "") {
+                    alert("Student ID Required Value");
+                    $("#sid").focus();
+                    return "";
+                }
+
+            var stuNameVar = $("#name").val();
+            if (stuNameVar === "") {
+                alert("Studnet Name is Required Value");
+                $("#name").focus();
+                return "";
+            }
+            var stuEmailVar = $("#email").val();
+            if (stuEmailVar === "") {
+                alert("Student Email Id is Required Value");
+                $("#email").focus();
+                return "";
+            }
+            var stuCourseVar = $("#course").val();
+            if (stuCourseVar === "") {
+                alert("Student Course  is Required Value");
+                $("#course").focus();
+                return "";
+            }
+            var stuGenVar = $("#Gender").val();
+            if (stuGenVar === "") {
+                alert("Student Email Id is Required Value");
+                $("#Gender").focus();
+                return "";
+            }
+            var stupassVar = $("#password").val();
+            if (stupassVar === "") {
+                alert("Student Email Id is Required Value");
+                $("#password").focus();
+                return "";
+            }
+            var jsonStrObj = {
+               sid: stuIdVar,
+                name: stuNameVar,
+                email: stuEmailVar,
+                course: stuCourseVar,
+                Gender: stuGenVar,
+                password: stupassVar
+            };
+            return JSON.stringify(jsonStrObj);
+        }
+
+        function resetForm() {
+              $("#sid").val(""),
+            $("#name").val("");
+            $("#email").val("");
+            $("#course").val("");
+            $("#password").val("");
+            $("Gender").val("");
+            $("#sid").focus();
+        }
+        function saveStu() {
+            var jsonStr = validateAndGetFormData();
+            if (jsonStr === "") {
+                return;
+            }
+            var putReqStr = createPUTRequest("90938857|-31948834038275014|90947383",
+                    jsonStr, "Stud", "index");
+            alert(putReqStr);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommandAtGivenBaseUrl(putReqStr,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            alert(JSON.stringify(resultObj));
+            jQuery.ajaxSetup({async: true});
+            resetForm();
+        }
+    </script>
+</body>
+
+
+
+
+
